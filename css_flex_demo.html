@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 1000px;
+            height: 500px;
+            border: 1px solid red;
+            /* Dàn trang với flex */
+            display: flex;
+            /* flex-direction: Điều khiển trục chính là dọc hay đứng */
+            /* 
+                row: dàn theo chiều ngang
+                column: dàn theo chiều dọc
+                row-reverse: dàn theo chiều ngang (ngược với row)
+            */
+            flex-direction: row;
+            /* flex-wrap: điều khiển có xuống dòng hay không */
+            /* flex-wrap: wrap; */
+            /* flex-flow: flex-direction flex-wrap */
+            /* flex-flow: row wrap; */
+            /* justify-content: căn khoảng trống giữa các item theo chiều main axis */
+            justify-content: space-around;
+            /* align-content: căn chỉnh khoảng trống các item theo chiều cross axis  */
+            align-content: space-around;
+            /* row-gap: 15px;
+            column-gap: 20px; */
+            gap: 15px 20px;
+        }
+
+        .item {
+            /* flex-basis: 200px; */
+            height: 200px;
+            background-color: blue;
+            color: yellow;
+            border: 1px solid black;
+            display: flex;
+            /* Dàn theo chiều cross axis - chiều dọc */
+            align-items: center;
+            /* Dàn theo chiều main axis - chiều ngang */
+            justify-content: center;
+        }
+
+        .item01 {
+            flex-grow: 1;
+            order: 1;
+        }
+
+        .item02 {
+            flex-grow: 1;
+            order: 6;
+        }
+
+        .item03 {
+            flex-grow: 5;
+            order: 4;
+        }
+    </style>
+    <div class="container">
+        <div class="item item01">Item 01</div>
+        <div class="item item02">Item 02</div>
+        <div class="item item03">Item 03</div>
+
+    </div>
+</body>
+
+</html>
